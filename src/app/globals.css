@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-soft: #F8F5F2;
+  --color-brand-dark: #382622;
+  --color-brand-accent: #59310b;
+}
+
+/* Forçar o reset manual se o Tailwind falhar */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #F8F5F2;
+}
+
+main {
+  display: block;
+}
+
+/* Forçar o efeito Glassmorphism */
+.backdrop-blur-xl {
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+}
+
+/* Garantir que as cores brand estão carregadas */
+:root {
+  --brand-soft: #F8F5F2;
+  --brand-dark: #382622;
+  --brand-accent: #59310b;
+}
