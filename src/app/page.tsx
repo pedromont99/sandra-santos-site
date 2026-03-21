@@ -22,13 +22,11 @@ export default function Home() {
             priority
           />
         </div>
-        {/* --------------------------------------- */}
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full relative z-20">
           
           {/* COLUNA DA IMAGEM */}
           <div className="relative order-first lg:order-last w-full max-w-[400px] lg:max-w-[500px] mx-auto lg:justify-self-end">
-            {/* ... (resto do teu código da imagem mantém-se igual) ... */}
             <div className="absolute -top-4 -left-4 z-20 bg-white/90 backdrop-blur-xl p-3 rounded-xl border border-[#382622]/5 shadow-xl hidden sm:flex items-center gap-2">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
               <span className="text-[9px] font-bold text-[#382622] uppercase tracking-tighter">Performance Active</span>
@@ -52,7 +50,6 @@ export default function Home() {
 
           {/* COLUNA ESQUERDA: Copy de Autoridade */}
           <div className="text-center lg:text-left space-y-8">
-            {/* ... (resto do teu copy mantém-se igual) ... */}
             <div className="inline-block px-4 py-1.5 bg-[#59310b]/5 border border-[#59310b]/10 rounded-full">
               <span className="text-[#59310b] text-[10px] lg:text-xs font-bold uppercase tracking-widest">Estratégia & Comunicação</span>
             </div>
@@ -75,14 +72,25 @@ export default function Home() {
               </button>
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* 2. SECÇÃO STATEMENT */}
-      <Statement />
-      <Services />
-      <Testimonials />
+      {/* MESTRE: As secções abaixo são componentes externos. 
+          Para que o alinhamento central seja perfeito, envolvi-as em contentores 
+          que forçam a simetria visual no desktop.
+      */}
+      
+      <div className="flex flex-col items-center text-center">
+        <Statement />
+      </div>
+
+      <div className="flex flex-col items-center text-center bg-[#F8F5F2]">
+        <Services />
+      </div>
+
+      <div className="flex flex-col items-center text-center">
+        <Testimonials />
+      </div>
     </>
   );
 }

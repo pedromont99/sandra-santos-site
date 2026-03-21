@@ -2,13 +2,17 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer"; // 1. O IMPORT TEM DE ESTAR AQUI
-import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
+
+export const metadata: Metadata = {
+  title: "Sandra Santos | Estratégia & Autoridade",
+  description: "Consultoria de imagem e posicionamento premium.",
+};
 
 export default function RootLayout({
   children,
@@ -18,10 +22,14 @@ export default function RootLayout({
   return (
     <html lang="pt" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased bg-[#F8F5F2] text-[#382622] flex flex-col min-h-screen`}>
+        {/* Navbar fixa no topo */}
         <Navbar />
         
-        {/* Este 'main' é o segredo para centrar tudo */}
-        <main className="flex-grow w-full max-w-7xl mx-auto px-6 md:px-12">
+        {/* O segredo: Removemos o max-w DAQUI. 
+            O conteúdo (Hero, etc) já tem o seu próprio max-w-7xl.
+            Assim o 'main' não sobe por cima da Navbar no Mobile.
+        */}
+        <main className="flex-grow w-full relative">
           {children}
         </main>
 
