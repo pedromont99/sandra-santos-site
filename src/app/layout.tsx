@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased bg-[#F8F5F2] text-[#382622] flex flex-col min-h-screen`}>
+      <body className={`${inter.variable} font-sans antialiased bg-[#1C1C1E] text-[#F2EDE4] flex flex-col min-h-screen`}>
         {/* Navbar fixa no topo */}
         <Navbar />
         

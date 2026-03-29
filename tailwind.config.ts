@@ -6,28 +6,27 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  // Se o erro persistir, removemos o safelist daqui e pomos no globals.css 
-  // Mas tenta primeiro assim:
   theme: {
     extend: {
       colors: {
         brand: {
-          soft: "#F8F5F2",
-          dark: "#382622",
-          accent: "#59310b",
+          soft: "#1C1C1E",
+          dark: "#F2EDE4",
+          accent: "#8C6D3F",
           marble: {
-            start: "#F8F5F2",
+            start: "#1C1C1E",
             middle: "#E8E2DC",
             end: "#D8D2CC",
           }
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
+        sans: ["Raleway", "sans-serif"],
+        serif: ["Cormorant Garamond", "serif"],
       },
     },
   },
   plugins: [],
-} as Config; // Adicionamos o "as Config" aqui no final
+} as Config;
 
 export default config;
