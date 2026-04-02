@@ -1,4 +1,5 @@
 export type Post = {
+  id: number;
   title: string;
   slug: string;
   category: string;
@@ -12,6 +13,7 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    id: 1,
     title: "O Poder da Imagem Estratégica no Digital",
     slug: "poder-da-imagem-estrategica",
     category: "Estratégia",
@@ -30,6 +32,7 @@ export const posts: Post[] = [
     ],
   },
   {
+    id: 2,
     title: "Silêncio Visual: O Luxo de não Gritar",
     slug: "silencio-visual",
     category: "Branding",
@@ -48,6 +51,7 @@ export const posts: Post[] = [
     ],
   },
   {
+    id: 3,
     title: "A Psicologia das Cores no Fechamento de Negócios",
     slug: "psicologia-das-cores",
     category: "Psicologia",
