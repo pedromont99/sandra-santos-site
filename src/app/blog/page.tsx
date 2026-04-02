@@ -1,32 +1,6 @@
 import Link from "next/link";
 import { posts } from "@/data/posts";
 
-const posts = [
-  {
-    id: 1,
-    title: "O Poder da Imagem Estratégica no Digital",
-    excerpt: "Como o seu posicionamento visual pode ditar o sucesso da sua faturação em 2026. A primeira impressão demora apenas 3 segundos.",
-    date: "21 Março, 2026",
-    category: "Estratégia",
-    slug: "poder-da-imagem-estrategica"
-  },
-  {
-    id: 2,
-    title: "Silêncio Visual: O Luxo de não Gritar",
-    excerpt: "No ruído das redes sociais, a elegância minimalista é a maior forma de destaque. Aprenda a comunicar sem esforço.",
-    date: "18 Março, 2026",
-    category: "Branding",
-    slug: "silencio-visual"
-  },
-  {
-    id: 3,
-    title: "A Psicologia das Cores no Fechamento de Negócios",
-    excerpt: "Por que o azul marinho transmite confiança e o preto autoridade? Saiba o que vestir para a sua próxima reunião de fecho.",
-    date: "14 Março, 2026",
-    category: "Psicologia",
-    slug: "psicologia-das-cores"
-  }
-];
 
 export default function BlogPage() {
   return (
