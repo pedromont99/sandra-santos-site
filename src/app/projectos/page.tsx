@@ -1,53 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { projetos } from "@/data/projectos";
 
-const projetos = [
-  {
-    id: "01",
-    cliente: "Sandra Santos",
-    categoria: "Estratégia & Marca Pessoal",
-    descricao: "Reposicionamento digital focado em autoridade e exclusividade para o mercado premium.",
-    insight: "A reestruturação permitiu um aumento de 40% na retenção orgânica através de conteúdo intencional.",
-    imagem: "/projeto-sandra.jpg",
-    imagemDetalhe1: "/sandra-detalhe-1.jpg",
-    imagemDetalhe2: "/sandra-detalhe-2.jpg",
-    tags: ["Branding", "Web Design", "Copywriting"]
-  },
-  {
-    id: "02",
-    cliente: "Check-in Destinos",
-    categoria: "Gestão de Conteúdos",
-    descricao: "Organização e curadoria de conteúdos para uma audiência que procura experiências de viagem únicas.",
-    insight: "Transformámos a comunicação visual para atrair um público de alto padrão, resultando em conversão direta.",
-    imagem: "/projeto-checkin.jpg",
-    imagemDetalhe1: "/checkin-detalhe-1.jpg",
-    imagemDetalhe2: "/checkin-detalhe-2.jpg",
-    tags: ["Social Media", "Strategy", "Visuals"]
-  },
-  {
-    id: "03",
-    cliente: "Project Alpha",
-    categoria: "Performance & Ads",
-    descricao: "Campanhas de tráfego pago otimizadas para escala de infoprodutos de alto ticket.",
-    insight: "Redução do custo por lead em 25% através de segmentação cirúrgica e criativos de alto impacto.",
-    imagem: "/projeto-placeholder-3.jpg",
-    imagemDetalhe1: "/detalhe-3-1.jpg",
-    imagemDetalhe2: "/detalhe-3-2.jpg",
-    tags: ["Google Ads", "Analytics", "Scaling"]
-  },
-  {
-    id: "04",
-    cliente: "Luxe Boutique",
-    categoria: "E-commerce & Assistência",
-    descricao: "Suporte operacional e gestão de loja online focada na experiência do cliente VIP.",
-    insight: "Otimização do fluxo de checkout e automação de atendimento, libertando 15h semanais da fundadora.",
-    imagem: "/projeto-placeholder-4.jpg",
-    imagemDetalhe1: "/detalhe-4-1.jpg",
-    imagemDetalhe2: "/detalhe-4-2.jpg",
-    tags: ["Shopify", "Operations", "Customer Care"]
-  }
-];
 
 export default function Projetos() {
   return (
@@ -62,7 +17,7 @@ export default function Projetos() {
           </h1>
         </div>
 
-        {/* LISTA DE PROJETOS */}
+        {/* LISTA DE PROJECTOS */}
         <div className="space-y-60"> {/* Aumentei o espaçamento para cada projeto respirar melhor */}
           {projetos.map((proj) => (
             <div key={proj.id} className="group relative">
@@ -93,7 +48,7 @@ export default function Projetos() {
                     ))}
                   </div>
 
-                  <Link href={`/projetos/${proj.id}`} className="inline-flex items-center gap-2 pt-8 group/link">
+                  <Link href={`/projectos/${proj.id}`} className="inline-flex items-center gap-2 pt-8 group/link">
                     <span className="font-bold text-[#F2EDE4] border-b-2 border-[#8C6D3F] pb-1">Ver Detalhes</span>
                     <ArrowUpRight className="w-5 h-5 text-[#8C6D3F] group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
                   </Link>
