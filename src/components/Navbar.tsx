@@ -11,13 +11,13 @@ export default function Navbar() {
   const navLinks = [
     { name: "Sobre", href: "/sobre" },
     { name: "Serviços", href: "/servicos" },
+    { name: "Gestão Digital", href: "/guia", highlight: true }, // ← highlight aqui
     { name: "Projectos", href: "/projectos" },
     { name: "Blog", href: "/blog" },
   ];
 
   return (
     <>
-      {/* O CHECKBOX MESTRE (O CÉREBRO INVISÍVEL) */}
       <input type="checkbox" id="menu-toggle" className="peer hidden" />
 
       <nav className="fixed top-0 left-0 w-full h-20 bg-[#1C1C1E]/70 backdrop-blur-xl border-b border-[#C8A96E]/20 z-[10000] flex items-center shadow-sm">
@@ -35,16 +35,18 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={`text-sm font-semibold transition-colors ${
-                  pathname === link.href 
-                    ? "text-[#C8A96E]" 
+                  pathname === link.href
+                    ? "text-[#C8A96E]"
+                    : link.highlight
+                    ? "text-[#C8A96E]/80 hover:text-[#C8A96E] font-bold"
                     : "text-[#F2EDE4]/60 hover:text-[#F2EDE4]"
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <Link 
-              href="/contacto" 
+            <Link
+              href="/contacto"
               className="ml-4 bg-[#C8A96E] text-[#1C1C1E] px-6 py-2.5 rounded-lg text-sm font-bold shadow-md hover:bg-[#8C6D3F] hover:text-[#F2EDE4] transition-colors"
             >
               Contacto
@@ -52,8 +54,8 @@ export default function Navbar() {
           </div>
 
           {/* BOTÃO HAMBÚRGUER */}
-          <label 
-            htmlFor="menu-toggle" 
+          <label
+            htmlFor="menu-toggle"
             className="md:hidden p-4 -mr-4 text-[#F2EDE4] relative z-[10002] cursor-pointer"
           >
             <div className="peer-checked:hidden block">
@@ -71,13 +73,16 @@ export default function Navbar() {
                       transition-all duration-500 ease-in-out md:hidden
                       opacity-0 invisible -translate-y-full
                       peer-checked:opacity-100 peer-checked:visible peer-checked:translate-y-0">
-        
         <div className="flex flex-col items-center gap-12">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-4xl font-serif italic text-[#F2EDE4] hover:text-[#C8A96E] transition-colors"
+              className={`text-4xl font-serif italic transition-colors ${
+                link.highlight
+                  ? "text-[#C8A96E] hover:text-[#8C6D3F]"
+                  : "text-[#F2EDE4] hover:text-[#C8A96E]"
+              }`}
             >
               {link.name}
             </Link>
