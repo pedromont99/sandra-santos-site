@@ -29,7 +29,7 @@ export default function RootLayout({
             O conteúdo (Hero, etc) já tem o seu próprio max-w-7xl.
             Assim o 'main' não sobe por cima da Navbar no Mobile.
         */}
-        <main className="flex-grow w-full relative">
+        <main className="flex-grow w-full">
           {children}
         </main>
 

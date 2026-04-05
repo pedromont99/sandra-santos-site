@@ -11,6 +11,8 @@
     overflow-x: hidden;
     background-color: var(--brand-profundo);
     position: relative;
+    -webkit-overflow-scrolling: touch; 
+    touch-action: manipulation; 
   }
 
   main {
