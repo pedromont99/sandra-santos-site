@@ -13,7 +13,7 @@ export default function Projetos() {
         <div className="mb-24 border-b border-[#F2EDE4]/10 pb-12">
           <p className="text-[#8C6D3F] text-xs font-bold uppercase tracking-[0.4em] mb-6">Portefólio</p>
           <h1 className="text-5xl md:text-8xl font-bold text-[#F2EDE4] tracking-tighter italic font-serif">
-            Projetos <span className="text-[#8C6D3F] not-italic font-sans underline decoration-1 underline-offset-8">Selecionados</span>.
+            Projetos <span className="text-[#8C6D3F] not-italic font-sans ">Selecionados</span>
           </h1>
         </div>
 
