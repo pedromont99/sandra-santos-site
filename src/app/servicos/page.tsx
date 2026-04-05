@@ -41,7 +41,7 @@ export default function Servicos() {
         <div className="max-w-3xl mb-24">
           <p className="text-[#8C6D3F] text-xs font-bold uppercase tracking-[0.4em] mb-6">Soluções</p>
           <h1 className="text-5xl md:text-7xl font-bold text-[#F2EDE4] tracking-tighter mb-8 italic font-serif">
-            Como posso <span className="text-[#8C6D3F] not-italic font-sans underline decoration-1 underline-offset-8">ajudar</span>.
+            Como posso <span className="text-[#8C6D3F] not-italic font-sans ">ajudar</span>
           </h1>
           <p className="text-xl text-[#F2EDE4]/70 leading-relaxed">
             Estratégia, conteúdo e soluções digitais pensadas para comunicar com clareza, consistência e impacto.

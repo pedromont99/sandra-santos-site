@@ -4,8 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Sandra Santos | Estratégia & Autoridade",
-  description: "Consultoria de imagem e posicionamento premium.",
+  title: "Sandra Santos | Crescimento Digital",
+  description: "Gestão de redes sociais, tráfego pago, websites e estratégia de conteúdo para negócios que querem crescer online. Portugal.",
 };
 
 export default function RootLayout({
