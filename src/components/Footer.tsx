@@ -1,11 +1,11 @@
-import { Instagram, Facebook, Linkedin, ArrowUpRight, MessageCircle } from "lucide-react"; // Adicionámos o MessageCircle
+import { ArrowUpRight, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   
-  // Configura aqui o número da Sandra (formato: 351912345678)
-  const whatsappNumber = "351900000000"; 
+  const whatsappNumber = "351924309018";
   const whatsappMessage = encodeURIComponent("Olá Sandra, vi o seu site e gostaria de saber mais sobre os seus serviços.");
 
   return (
@@ -21,8 +21,6 @@ export default function Footer() {
             <p className="text-[#1C1C1E]/60 max-w-sm text-lg leading-relaxed">
               Transformo a sua presença digital em posicionamento, autoridade e crescimento.
             </p>
-            
-            {/* REDES SOCIAIS + WHATSAPP */}
             <div className="flex gap-4 pt-2">
               <a 
                 href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
@@ -34,28 +32,20 @@ export default function Footer() {
                 <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://instagram.com/sandrasantos.pt/"
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-3 bg-[#1C1C1E]/5 rounded-full hover:bg-[#8C6D3F] transition-all duration-300 group"
+                className="p-3 bg-[#1C1C1E]/5 rounded-full hover:bg-[#8C6D3F] hover:text-[#F2EDE4] transition-all duration-300 group"
               >
-                <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <FaInstagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a 
-                href="https://facebook.com" 
+                href="https://facebook.com/sandrasantos.studio"
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-3 bg-[#1C1C1E]/5 rounded-full hover:bg-[#8C6D3F] transition-all duration-300 group"
+                className="p-3 bg-[#1C1C1E]/5 rounded-full hover:bg-[#8C6D3F] hover:text-[#F2EDE4] transition-all duration-300 group"
               >
-                <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-3 bg-[#1C1C1E]/5 rounded-full hover:bg-[#8C6D3F] transition-all duration-300 group"
-              >
-                <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <FaFacebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
             </div>
           </div>
@@ -68,6 +58,7 @@ export default function Footer() {
               <li><Link href="/servicos" className="text-[#1C1C1E]/70 hover:text-[#1C1C1E] transition-colors">Serviços</Link></li>
               <li><Link href="/projectos" className="text-[#1C1C1E]/70 hover:text-[#1C1C1E] transition-colors">Projetos</Link></li>
               <li><Link href="/blog" className="text-[#1C1C1E]/70 hover:text-[#1C1C1E] transition-colors">Blog</Link></li>
+              <li><Link href="/guia" className="text-[#C8A96E] hover:text-[#8C6D3F] transition-colors font-bold">Gestão Digital</Link></li>
             </ul>
           </div>
 

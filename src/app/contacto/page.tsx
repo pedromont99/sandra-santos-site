@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Mail, Instagram, Linkedin, Facebook, ArrowRight } from "lucide-react";
+import { Mail, ArrowRight } from "lucide-react"; 
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 export default function Contacto() {
   const [formData, setFormData] = useState({
@@ -69,13 +70,14 @@ export default function Contacto() {
               <h3 className="text-sm font-bold uppercase tracking-[0.2em] mb-6 opacity-50">Social</h3>
               <div className="flex gap-4">
                 {[
-                  { icon: <Instagram size={20} />, label: "Instagram", url: "#" },
-                  { icon: <Linkedin size={20} />, label: "LinkedIn", url: "#" },
-                  { icon: <Facebook size={20} />, label: "Facebook", url: "#" },
+                  { icon: <FaInstagram size={20} />, label: "Instagram", url: "https://instagram.com/sandrasantos.pt/" },
+                  { icon: <FaFacebook size={20} />, label: "Facebook", url: "https://facebook.com/sandrasantos.studio" },
                 ].map((social, i) => (
                   <a
                     key={i}
                     href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full border border-[#F2EDE4]/10 flex items-center justify-center hover:bg-[#F2EDE4] hover:text-[#1C1C1E] transition-all"
                     title={social.label}
                   >
