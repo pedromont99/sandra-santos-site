@@ -11,7 +11,7 @@ export default function EmBreve() {
           Estou a preparar algo especial para si. Volte em breve.
         </p>
         <div className="w-20 h-[1px] bg-[#C8A96E]/40 mx-auto" />
-        
+        <a
           href="mailto:ola@sandrasantos.pt"
           className="inline-block text-[#C8A96E] text-sm font-bold uppercase tracking-widest hover:text-[#F2EDE4] transition-colors"
         >
