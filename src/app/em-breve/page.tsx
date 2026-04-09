@@ -8,7 +8,7 @@ export default function EmBreve() {
           <span className="text-[#C8A96E]">está a caminho.</span>
         </h1>
         <p className="text-xl text-[#F2EDE4]/60 leading-relaxed">
-          Estou a preparar algo especial para si. Volte em breve.
+          Estou a preparar algo especial para ti. Volta em breve.
         </p>
         <div className="w-20 h-[1px] bg-[#C8A96E]/40 mx-auto" />
         <a
