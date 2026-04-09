@@ -2,9 +2,13 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
+  // Em desenvolvimento não redireciona
+  if (process.env.NODE_ENV === "development") {
+    return NextResponse.next();
+  }
+
   const { pathname } = request.nextUrl;
 
-  // Permite acesso à página em-breve e assets
   if (
     pathname.startsWith("/em-breve") ||
     pathname.startsWith("/_next") ||
@@ -14,7 +18,6 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Redireciona tudo o resto para em-breve
   return NextResponse.redirect(new URL("/em-breve", request.url));
 }
 
