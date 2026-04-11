@@ -8,7 +8,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
+  const navLinks: { name: string; href: string; highlight?: boolean }[] = [
     { name: "Sobre", href: "/sobre" },
     { name: "Serviços", href: "/servicos" },
     // { name: "Gestão Digital", href: "/guia", highlight: true },
@@ -32,13 +32,12 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-semibold transition-colors ${
-                  pathname === link.href
+                className={`text-sm font-semibold transition-colors ${pathname === link.href
                     ? "text-[#C8A96E]"
                     : link.highlight
-                    ? "text-[#C8A96E]/80 hover:text-[#C8A96E] font-bold"
-                    : "text-[#F2EDE4]/60 hover:text-[#F2EDE4]"
-                }`}
+                      ? "text-[#C8A96E]/80 hover:text-[#C8A96E] font-bold"
+                      : "text-[#F2EDE4]/60 hover:text-[#F2EDE4]"
+                  }`}
               >
                 {link.name}
               </Link>
@@ -72,11 +71,10 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`text-4xl font-serif italic transition-colors ${
-                  link.highlight
+                className={`text-4xl font-serif italic transition-colors ${link.highlight
                     ? "text-[#C8A96E] hover:text-[#8C6D3F]"
                     : "text-[#F2EDE4] hover:text-[#C8A96E]"
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
