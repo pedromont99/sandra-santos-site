@@ -70,7 +70,7 @@ export default function Footer() {
               <li><Link href="/servicos" className="text-[#1C1C1E]/70 hover:text-[#1C1C1E] transition-colors">Serviços</Link></li>
               <li><Link href="/projectos" className="text-[#1C1C1E]/70 hover:text-[#1C1C1E] transition-colors">Projetos</Link></li>
               <li><Link href="/blog" className="text-[#1C1C1E]/70 hover:text-[#1C1C1E] transition-colors">Blog</Link></li>
-              <li><Link href="/guia" className="text-[#C8A96E] hover:text-[#8C6D3F] transition-colors font-bold">Gestão Digital</Link></li>
+              {/* <li><Link href="/guia" className="text-[#C8A96E] hover:text-[#8C6D3F] transition-colors font-bold">Gestão Digital</Link></li> */}
             </ul>
           </div>
 

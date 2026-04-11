@@ -2,20 +2,21 @@ import Image from "next/image";
 import Statement from "@/components/statement";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       {/* 1. SECÇÃO HERO */}
       <section className="relative pt-32 pb-20 overflow-hidden min-h-[90vh] flex items-center bg-[#1C1C1E]">
-        
+
         {/* Background Decorativo - Marble */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-gradient-to-tr from-[#1C1C1E] via-[#E8E2DC] to-[#D8D2CC] opacity-30 blur-[120px] z-0 pointer-events-none" />
 
         {/* --- O "S" MONOGRAMA (MARCA DE ÁGUA) --- */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] lg:w-[950px] aspect-square pointer-events-none z-10 select-none">
-          <Image 
-            src="/Logo-Sandra-Santos.svg" 
+          <Image
+            src="/Logo-Sandra-Santos.svg"
             alt="Monograma Sandra Santos"
             fill
             className="object-contain opacity-[0.08]"
@@ -24,7 +25,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full relative z-20">
-          
+
           {/* COLUNA DA IMAGEM */}
           <div className="relative order-first lg:order-last w-full max-w-[400px] lg:max-w-[500px] mx-auto lg:justify-self-end">
             <div className="absolute -top-4 -left-4 z-20 bg-[#1C1C1E]/90 backdrop-blur-xl p-3 rounded-xl border border-[#F2EDE4]/5 shadow-xl hidden sm:flex items-center gap-2">
@@ -33,8 +34,8 @@ export default function Home() {
             </div>
 
             <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden border border-[#F2EDE4]/10 shadow-2xl lg:rotate-1 hover:rotate-0 transition-transform duration-700">
-              <Image 
-                src="/sandra-santos-hero.jpg" 
+              <Image
+                src="/sandra-santos-hero.jpg"
                 alt="Sandra Santos"
                 fill
                 className="object-cover"
@@ -64,12 +65,12 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
-              <button className="w-full sm:w-[220px] px-8 py-4 bg-[#F2EDE4] text-[#1C1C1E] rounded-xl font-bold transition-all duration-300 hover:bg-[#8C6D3F] hover:scale-105 active:scale-95 shadow-lg shadow-[#F2EDE4]/10">
+              <Link href="/projectos" className="w-full sm:w-[220px] px-8 py-4 bg-[#F2EDE4] text-[#1C1C1E] rounded-xl font-bold transition-all duration-300 hover:bg-[#8C6D3F] hover:text-[#F2EDE4] hover:scale-105 active:scale-95 shadow-lg shadow-[#F2EDE4]/10 text-center">
                 Ver projetos
-              </button>
-              <button className="w-full sm:w-[220px] px-8 py-4 border-2 border-[#F2EDE4] text-[#F2EDE4] bg-transparent rounded-xl font-bold transition-all duration-300 hover:bg-[#F2EDE4] hover:text-[#1C1C1E] hover:scale-105 active:scale-95">
+              </Link>
+              <Link href="/contacto" className="w-full sm:w-[220px] px-8 py-4 border-2 border-[#F2EDE4] text-[#F2EDE4] bg-transparent rounded-xl font-bold transition-all duration-300 hover:bg-[#F2EDE4] hover:text-[#1C1C1E] hover:scale-105 active:scale-95 text-center">
                 Trabalhar comigo
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -79,7 +80,7 @@ export default function Home() {
           Para que o alinhamento central seja perfeito, envolvi-as em contentores 
           que forçam a simetria visual no desktop.
       */}
-      
+
       <div className="flex flex-col items-center text-center">
         <Statement />
       </div>

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Mail, ArrowRight } from "lucide-react"; 
+import { Mail, ArrowRight } from "lucide-react";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 export default function Contacto() {
@@ -9,6 +9,7 @@ export default function Contacto() {
     email: "",
     servico: "Branding & Social Media",
     mensagem: "",
+    privacidade: false,
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -25,7 +26,7 @@ export default function Contacto() {
 
       if (res.ok) {
         setStatus("success");
-        setFormData({ nome: "", email: "", servico: "Branding & Social Media", mensagem: "" });
+        setFormData({ nome: "", email: "", servico: "Branding & Social Media", mensagem: "", privacidade: false });
       } else {
         setStatus("error");
       }
@@ -162,6 +163,28 @@ export default function Contacto() {
                 {status === "error" && (
                   <p className="text-red-500 text-sm">Erro ao enviar. Tenta novamente.</p>
                 )}
+
+                <div className="space-y-2">
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      required
+                      checked={formData.privacidade}
+                      onChange={(e) => setFormData({ ...formData, privacidade: e.target.checked })}
+                      className="mt-1 w-4 h-4 accent-[#C8A96E] cursor-pointer shrink-0"
+                    />
+                    <span className="text-[#1C1C1E]/60 text-xs leading-relaxed">
+                      Li e aceito a{" "}
+                      <a href="/privacidade" target="_blank" className="text-[#C8A96E] hover:underline font-bold">
+                        Política de Privacidade
+                      </a>{" "}
+                      e os{" "}
+                      <a href="/termos" target="_blank" className="text-[#C8A96E] hover:underline font-bold">
+                        Termos e Condições
+                      </a>.
+                    </span>
+                  </label>
+                </div>
 
                 <button
                   type="submit"

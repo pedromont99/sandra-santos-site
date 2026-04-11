@@ -11,7 +11,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Sobre", href: "/sobre" },
     { name: "Serviços", href: "/servicos" },
-    { name: "Gestão Digital", href: "/guia", highlight: true },
+    // { name: "Gestão Digital", href: "/guia", highlight: true },
     { name: "Projectos", href: "/projectos" },
     { name: "Blog", href: "/blog" },
   ];
