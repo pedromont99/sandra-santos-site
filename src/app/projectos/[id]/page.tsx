@@ -50,6 +50,8 @@ export default async function ProjetoDetalhe({ params }: { params: Promise<{ id:
             src={projeto.imagem}
             alt={projeto.cliente}
             fill
+            sizes="100vw"
+            quality={100}
             className="object-cover"
             priority
           />
