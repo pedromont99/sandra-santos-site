@@ -85,7 +85,9 @@ export default function Footer() {
                 Trabalhar comigo
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </Link>
-              <p className="text-[#1C1C1E]/40 text-sm">ola@sandrasantos.pt</p>
+              <a href="mailto:ola@sandrasantos.pt" className="text-[#1C1C1E]/40 text-sm hover:text-[#8C6D3F] transition-colors">
+                ola@sandrasantos.pt
+              </a>
             </div>
           </div>
         </div>
