@@ -34,7 +34,7 @@ export default function Home() {
             </div>
 
             <div className="absolute -bottom-4 -right-4 z-20 bg-[#8C6D3F] text-[#1C1C1E] p-4 lg:p-6 rounded-2xl shadow-2xl scale-90 lg:scale-100">
-              <p className="text-xl lg:text-2xl font-serif italic">Digital Strategy</p>
+              <p className="text-xl lg:text-2xl font-serif italic">Estratégia Digital</p>
             </div>
           </div>
 
@@ -45,7 +45,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl italic font-serif text-[#F2EDE4] tracking-tight leading-[1.15]">
-              Transformo a sua presença digital em <br />
+              Transformo a tua presença digital em <br />
               <span className="text-[#8C6D3F] italic font-serif">posicionamento e autoridade.</span>
             </h1>
 
