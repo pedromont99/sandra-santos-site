@@ -105,7 +105,7 @@ export default function Sobre() {
                 <div className="w-16 h-[1px] bg-gradient-to-r from-[#C8A96E] to-transparent" />
                 <h4 className="text-2xl font-bold tracking-tight text-[#1C1C1E]">Estratégia Integrada</h4>
                 <p className="text-lg text-[#1C1C1E]/60 leading-relaxed font-light group-hover:text-[#1C1C1E]/90 transition-colors">
-                  Olhamos para o negócio como um ecossistema. Da assistência operacional à performance, cada peça deve estar alinhada com a
+                  Olho para o negócio como um ecossistema. Da assistência operacional à performance, cada peça deve estar alinhada com a
                   <span className="text-[#C8A96E] font-medium italic ml-1">visão de longo prazo.</span>
                 </p>
               </div>
@@ -116,7 +116,7 @@ export default function Sobre() {
                 <h4 className="text-2xl font-bold tracking-tight text-[#1C1C1E]">Clareza & Autoridade</h4>
                 <p className="text-lg text-[#1C1C1E]/60 leading-relaxed font-light group-hover:text-[#1C1C1E]/90 transition-colors">
                   A estética premium não é um adorno; é um
-                  <span className="text-[#C8A96E] font-medium italic ml-1">filtro de confiança</span>. Removemos o ruído para que a sua mensagem chegue com clareza.
+                  <span className="text-[#C8A96E] font-medium italic ml-1">filtro de confiança</span>. Removo o ruído para que a tua mensagem chegue com clareza.
                 </p>
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function Sobre() {
             {/* Citação Final com destaque em "Vidro" */}
             <div className="mt-20 pt-16 border-t border-[#1C1C1E]/5">
               <p className="text-xl md:text-3xl font-serif italic text-[#C8A96E]/90 leading-snug">
-                "O meu objetivo é que o digital trabalhe para si, <br className="hidden md:block" /> e não o contrário."
+                "O meu objetivo é que o digital trabalhe para ti, <br className="hidden md:block" /> e não o contrário."
               </p>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function Sobre() {
 
         {/* CTA FINAL DA PÁGINA */}
         <div className="text-center space-y-8">
-          <h3 className="text-2xl md:text-4xl font-bold text-[#F2EDE4]">Vamos estruturar o seu próximo passo?</h3>
+          <h3 className="text-2xl md:text-4xl font-bold text-[#F2EDE4]">Vamos estruturar o teu próximo passo?</h3>
           <Link
             href="/contacto"
             className="inline-flex items-center gap-3 bg-[#F2EDE4] text-[#1C1C1E] px-10 py-5 rounded-xl font-bold hover:bg-[#8C6D3F] transition-all group"

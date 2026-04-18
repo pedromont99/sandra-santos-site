@@ -44,7 +44,7 @@ export default function Contacto() {
           <p className="text-[#8C6D3F] text-xs font-bold uppercase tracking-[0.4em] mb-6">Ligação</p>
           <h1 className="text-5xl md:text-8xl font-bold tracking-tighter italic font-serif">
             Vamos <br />
-            <span className="text-[#8C6D3F] not-italic font-sans underline decoration-1 underline-offset-8">conversar?</span>
+            <span className="text-[#8C6D3F] not-italic font-sans">conversar?</span>
           </h1>
         </div>
 
@@ -114,7 +114,7 @@ export default function Contacto() {
                     <label className="text-[10px] uppercase font-bold tracking-widest text-[#C8A96E]">Nome</label>
                     <input
                       type="text"
-                      placeholder="Como se chama?"
+                      placeholder="Como te chamas?"
                       required
                       value={formData.nome}
                       onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
@@ -125,7 +125,7 @@ export default function Contacto() {
                     <label className="text-[10px] uppercase font-bold tracking-widest text-[#C8A96E]">Email</label>
                     <input
                       type="email"
-                      placeholder="O seu melhor email"
+                      placeholder="O teu melhor email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -152,7 +152,7 @@ export default function Contacto() {
                   <label className="text-[10px] uppercase font-bold tracking-widest text-[#C8A96E]">Mensagem</label>
                   <textarea
                     rows={4}
-                    placeholder="Conte-me um pouco sobre o seu projeto..."
+                    placeholder="Conta-me um pouco sobre o teu projeto..."
                     required
                     value={formData.mensagem}
                     onChange={(e) => setFormData({ ...formData, mensagem: e.target.value })}

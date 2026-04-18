@@ -31,7 +31,7 @@ export default function Footer() {
               SandraSantos<span className="text-[#C8A96E]">.pt</span>
             </Link>
             <p className="text-[#1C1C1E]/60 max-w-sm text-lg leading-relaxed">
-              Transformo a sua presença digital em posicionamento, autoridade e crescimento.
+              Transformo a tua presença digital em posicionamento, autoridade e crescimento.
             </p>
             <div className="flex gap-4 pt-2">
               <a

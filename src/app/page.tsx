@@ -13,17 +13,6 @@ export default function Home() {
         {/* Background Decorativo - Marble */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-gradient-to-tr from-[#1C1C1E] via-[#E8E2DC] to-[#D8D2CC] opacity-30 blur-[120px] z-0 pointer-events-none" />
 
-        {/* --- O "S" MONOGRAMA (MARCA DE ÁGUA) --- */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] lg:w-[950px] aspect-square pointer-events-none z-10 select-none">
-          <Image
-            src="/Logo-Sandra-Santos.svg"
-            alt="Monograma Sandra Santos"
-            fill
-            className="object-contain opacity-[0.08]"
-            priority
-          />
-        </div>
-
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full relative z-20">
 
           {/* COLUNA DA IMAGEM */}

@@ -4,22 +4,22 @@ import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    text: "A Sandra não mudou apenas o meu guarda-roupa, ela mudou a forma como eu entro numa sala de reuniões. A minha faturação acompanhou o meu novo posicionamento.",
-    author: "Marta Fonseca",
-    role: "CEO & Fundadora",
+    text: "A Sandra tem uma excelente capacidade, para estruturar conteúdos e organizar a comunicação digital de forma clara e consistente. O seu trabalho trouxe mais estratégia e coêrencia á presença online do meu negócio.",
+    author: "Marta F.",
+    role: "Empreendedora",
     initial: "M"
   },
   {
-    text: "A estratégia de conteúdo que desenhámos trouxe-me uma clareza que eu não tinha há anos. O meu Instagram agora comunica luxo e autoridade.",
-    author: "Ana Oliveira",
-    role: "Architect & Designer",
-    initial: "A"
+    text: "O trabalho da Sandra destacou-se pela estratégia e atenção ao detalhe. A comunicação passou a ser mais consistente e alinhada com a identidade da minha marca.",
+    author: "Daniela C.",
+    role: "Terapeuta Holistíca",
+    initial: "D"
   },
   {
     text: "Ter a Sandra a gerir a minha presença digital permitiu-me focar no que faço melhor. Os resultados em termos de leads qualificados são visíveis.",
-    author: "Carla Santos",
-    role: "Consultora Imobiliária",
-    initial: "C"
+    author: "Fernanda B.",
+    role: "Empreendedora",
+    initial: "F"
   }
 ];
 

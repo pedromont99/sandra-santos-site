@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { projetos } from "@/data/projectos";
 
-
 export default function Projetos() {
   return (
     <main className="pt-32 pb-20 bg-[#1C1C1E] min-h-screen font-sans">
@@ -13,12 +12,12 @@ export default function Projetos() {
         <div className="mb-24 border-b border-[#F2EDE4]/10 pb-12">
           <p className="text-[#8C6D3F] text-xs font-bold uppercase tracking-[0.4em] mb-6">Portefólio</p>
           <h1 className="text-5xl md:text-8xl font-bold text-[#F2EDE4] tracking-tighter italic font-serif">
-            Projetos <span className="text-[#8C6D3F] not-italic font-sans ">Selecionados</span>
+            Projetos <span className="text-[#8C6D3F] not-italic font-sans">Selecionados</span>
           </h1>
         </div>
 
         {/* LISTA DE PROJECTOS */}
-        <div className="space-y-60"> {/* Aumentei o espaçamento para cada projeto respirar melhor */}
+        <div className="space-y-60">
           {projetos.map((proj) => (
             <div key={proj.id} className="group relative">
               <div className="grid lg:grid-cols-12 gap-12 items-start">
@@ -55,42 +54,50 @@ export default function Projetos() {
                 </div>
 
                 {/* MOSAICO VISUAL (DIREITA) */}
-                <div className="lg:col-span-8 order-1 lg:order-2 space-y-8">
+                <div className="lg:col-span-8 order-1 lg:order-2">
                   <div className="grid grid-cols-12 gap-6">
 
+                    {/* IMAGEM PRINCIPAL — 16:9 */}
                     <div className="col-span-12 md:col-span-8 relative aspect-video rounded-[2rem] overflow-hidden shadow-2xl group/img">
                       <Image
                         src={proj.imagem}
                         alt={proj.cliente}
                         fill
+                        sizes="(max-width: 768px) 100vw, 66vw"
                         className="object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700"
                       />
                     </div>
 
-                    <div className="col-span-6 md:col-span-4 relative aspect-square rounded-[2rem] overflow-hidden shadow-xl border border-[#F2EDE4]/5">
+                    {/* DETALHE 1 — quadrado com grayscale */}
+                    <div className="col-span-6 md:col-span-4 relative aspect-square rounded-[2rem] overflow-hidden shadow-xl border border-[#F2EDE4]/5 group/img1">
                       <Image
                         src={proj.imagemDetalhe1}
                         alt="Detalhe 1"
                         fill
-                        className="object-cover"
+                        sizes="(max-width: 768px) 50vw, 33vw"
+                        className="object-cover grayscale group-hover/img1:grayscale-0 transition-all duration-700"
                       />
                     </div>
 
-                    <div className="col-span-6 md:col-span-4 bg-[#F2EDE4] p-8 rounded-[2.5rem] flex flex-col justify-center">
-                      <span className="text-[#C8A96E] text-[10px] font-bold uppercase tracking-widest mb-2">Insight</span>
-                      <p className="text-[#1C1C1E] text-sm font-medium leading-relaxed italic font-serif">
-                        "{proj.insight}"
-                      </p>
-                    </div>
-
-                    <div className="col-span-12 md:col-span-8 relative h-[250px] rounded-[2rem] overflow-hidden shadow-xl group/img2">
+                    {/* DETALHE 2 — quadrado pequeno */}
+                    <div className="col-span-6 md:col-span-4 relative aspect-square rounded-[2rem] overflow-hidden shadow-xl group/img2">
                       <Image
                         src={proj.imagemDetalhe2}
                         alt="Detalhe 2"
                         fill
+                        sizes="(max-width: 768px) 50vw, 33vw"
                         className="object-cover grayscale group-hover/img2:grayscale-0 transition-all duration-500"
                       />
                     </div>
+
+                    {/* INSIGHT — frame grande 16:9 */}
+                    <div className="col-span-12 md:col-span-8 relative aspect-video bg-[#F2EDE4] p-8 md:p-12 rounded-[2rem] flex flex-col justify-center">
+                      <span className="text-[#C8A96E] text-[10px] font-bold uppercase tracking-widest mb-4">Insight</span>
+                      <p className="text-[#1C1C1E] text-lg md:text-xl font-medium leading-relaxed italic font-serif">
+                        "{proj.insight}"
+                      </p>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -102,8 +109,8 @@ export default function Projetos() {
         <div className="mt-40 text-center py-24 bg-[#F2EDE4] rounded-[3rem] text-[#1C1C1E] relative overflow-hidden">
           <div className="absolute top-0 left-0 w-64 h-64 bg-[#C8A96E]/5 blur-[80px] -ml-20 -mt-20" />
           <div className="relative z-10 space-y-8">
-            <h2 className="text-3xl md:text-6xl font-bold tracking-tighter">O seu projeto pode <br /> ser o próximo.</h2>
-            <p className="text-[#1C1C1E]/60 max-w-lg mx-auto text-lg font-light">Vamos transformar a sua visão num posicionamento de autoridade inquestionável.</p>
+            <h2 className="text-3xl md:text-6xl font-bold tracking-tighter">O teu projeto pode <br /> ser o próximo.</h2>
+            <p className="text-[#1C1C1E]/60 max-w-lg mx-auto text-lg font-light">Vamos transformar a tua visão num posicionamento de autoridade inquestionável.</p>
             <Link href="/contacto" className="inline-block px-12 py-5 bg-[#C8A96E] text-[#F2EDE4] rounded-xl font-bold hover:bg-[#1C1C1E] transition-all transform hover:scale-105 shadow-xl">
               Iniciar conversa
             </Link>
