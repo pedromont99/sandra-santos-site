@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowLeft, Clock, Share2 } from "lucide-react";
 import { notFound } from "next/navigation";
 import { posts } from "@/data/posts";
+import ShareButton from "@/components/ShareButton";
 
 
 export async function generateStaticParams() {
@@ -42,9 +43,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 <p className="text-[10px] text-[#F2EDE4]/50">Estrategista de Imagem</p>
               </div>
             </div>
-            <button className="text-[#F2EDE4]/40 hover:text-[#C8A96E] transition-colors">
-              <Share2 size={18} />
-            </button>
+            <ShareButton title={post.title} />
           </div>
         </header>
 
@@ -70,8 +69,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
         {/* CTA */}
         <footer className="mt-20 p-10 bg-[#F2EDE4] rounded-3xl text-center">
-          <h3 className="text-[#1C1C1E] font-serif italic text-2xl mb-4">Pronta para elevar o seu nível?</h3>
-          <p className="text-[#1C1C1E]/60 text-sm mb-8">Agende uma consultoria estratégica e transforme a sua presença digital.</p>
+          <h3 className="text-[#1C1C1E] font-serif italic text-2xl mb-4">Pronta para elevar o teu nível?</h3>
+          <p className="text-[#1C1C1E]/60 text-sm mb-8">Agende uma consultoria estratégica e transforma a tua presença digital.</p>
           <Link href="/contacto" className="inline-block bg-[#C8A96E] text-[#F2EDE4] px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-[#1C1C1E] transition-all shadow-lg">
             Solicitar Proposta
           </Link>
