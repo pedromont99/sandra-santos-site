@@ -107,12 +107,20 @@ export default function Footer() {
             >
               Gerir Cookies
             </button>
-          </div>
+
+            <a href="https://www.livroreclamacoes.pt/Inicio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#1C1C1E]/40 text-xs hover:text-[#1C1C1E] transition-colors"
+            >
+              Livro de Reclamações
+            </a>
+          </div> {/* fecha o flex gap-6 */}
           <p className="text-[#1C1C1E]/40 text-[10px] tracking-[0.2em] uppercase">
             Built with Intention by Sandra Santos
           </p>
-        </div>
-      </div>
+        </div> {/* fecha o pt-10 barra final */}
+      </div> {/* fecha o max-w-7xl */}
     </footer>
   );
 }
